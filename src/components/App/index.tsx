@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState, ReactNode } from 'react';
+import { generateCells } from '../../utils';
 
 import NumberDisplay from '../NumberDisplay';
 import happyImg from '../../assets/happy.png';
+import Button from '../Button';
 
 import './styles.scss';
 
 const App: React.FC = () => {
+  const [cells, setCells] = useState(generateCells);
+
+  const renderCells = (): ReactNode => {
+    return cells.map((row, rowIndex) =>
+      row.map((cell, cellIndex) => <Button key={`${rowIndex}-${cellIndex}`} />),
+    );
+  };
+
   return (
     <div className="App">
       <div className="Header">
@@ -17,7 +27,7 @@ const App: React.FC = () => {
         </div>
         <NumberDisplay value={23} />
       </div>
-      <div className="Body">Body</div>
+      <div className="Body">{renderCells()}</div>
     </div>
   );
 };

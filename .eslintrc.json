@@ -30,6 +30,8 @@
     "prettier"
   ],
   "rules": {
+    "react/no-array-index-key": "off",
+    "no-plusplus": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "prettier/prettier": "error",
