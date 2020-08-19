@@ -8,11 +8,19 @@ import Button from '../Button';
 import './styles.scss';
 
 const App: React.FC = () => {
-  const [cells, setCells] = useState(generateCells);
+  const [cells] = useState(generateCells);
 
   const renderCells = (): ReactNode => {
     return cells.map((row, rowIndex) =>
-      row.map((cell, cellIndex) => <Button key={`${rowIndex}-${cellIndex}`} />),
+      row.map((cell, colIndex) => (
+        <Button
+          key={`${rowIndex}-${colIndex}`}
+          state={cell.state}
+          value={cell.value}
+          row={rowIndex}
+          col={colIndex}
+        />
+      )),
     );
   };
 

@@ -30,6 +30,7 @@
     "prettier"
   ],
   "rules": {
+    "no-continue": "off",
     "react/no-array-index-key": "off",
     "no-plusplus": "off",
     "react/jsx-props-no-spreading": "off",
