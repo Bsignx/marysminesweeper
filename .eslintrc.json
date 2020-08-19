@@ -30,6 +30,7 @@
     "prettier"
   ],
   "rules": {
+    "global-require":"off",
     "no-continue": "off",
     "react/no-array-index-key": "off",
     "no-plusplus": "off",
