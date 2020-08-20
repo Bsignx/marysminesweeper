@@ -18,7 +18,7 @@
 .Body {
   @include borders(#7b7b7b, white);
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
+  grid-template-columns: repeat(40, 1fr);
   grid-template-rows: repeat(15, 1fr);
   margin-top: 16px;
 }
